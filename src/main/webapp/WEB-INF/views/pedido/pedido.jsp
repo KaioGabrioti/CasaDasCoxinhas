@@ -4,7 +4,7 @@
 <%@ taglib tagdir="/WEB-INF/tags/" prefix="ingresso" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<ingresso:template>
+<casadascoxinhas:template>
     <jsp:body>
 		<div class=" col-md-6 col-md-offset-3">
         <c:set var="bindingResult" value="${requestScope['org.springframework.validation.BindingResult.filme']}"/>
@@ -13,23 +13,23 @@
             <input type="hidden" name="id" value="${filme.id}">
 
             <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input id="nome" type="text" name="nome" class="form-control" value="${filme.nome}">
+                <label for="nome">Cliente:</label>
+                <input id="nome" type="text" name="nome" class="form-control" value="${cliente.nome}">
                 <c:forEach items="${bindingResult.getFieldErrors('nome')}" var="error">
                     <span class="text-danger">${error.defaultMessage}</span>
                 </c:forEach>
             </div>
 
             <div class="form-group">
-                <label for="genero">Genero:</label>
-                <input id="genero" type="text" name="genero" class="form-control" value="${filme.genero}">
+                <label for="genero">Quantidade:</label>
+                <input id="genero" type="text" name="genero" class="form-control" value="${pedido.quantidade}">
                 <c:forEach items="${bindingResult.getFieldErrors('genero')}" var="error">
                     <span class="text-danger">${error.defaultMessage}</span>
                 </c:forEach>
             </div>
 
             <div class="form-group">
-                <label for="duracao">Duracao:</label>
+                <label for="duracao">Data de Entrega:</label>
                 <input id="duracao" type="text" name="duracao" class="form-control"
                        value="${filme.duracao.toMinutes()}">
                 <c:forEach items="${bindingResult.getFieldErrors('duracao')}" var="error">
@@ -50,4 +50,4 @@
         </form>
         </div>
     </jsp:body>
-</ingresso:template>
+</casadascoxinhas:template>

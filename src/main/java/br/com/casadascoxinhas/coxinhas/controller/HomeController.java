@@ -1,10 +1,10 @@
-package br.com.caelum.ingresso.controller;
+package br.com.casadascoxinhas.coxinhas.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * Created by nando on 03/03/17.
+ * Created by Gabrioti on 12/08/2018.
  */
 @Controller
 public class HomeController {

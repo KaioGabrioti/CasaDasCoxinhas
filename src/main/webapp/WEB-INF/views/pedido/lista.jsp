@@ -11,34 +11,34 @@
 		<table class="table table-hover ">
 			<thead>
 				<tr>
-					<th>Nome</th>
-					<th>Duração</th>
+					<th>Cliente</th>
+					<th>Horário de Entrega</th>
 					<!-- <th>Preço</th> -->
 					<th colspan="2" class="text-center">Ações</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="filme" items="${filmes}">
+				<c:forEach var="pedido" items="${pedidos}">
 					<tr>
-						<td>${filme.nome}</td>
-						<td>${filme.duracao.toMinutes()}</td>
+						<td>${pedido.nome}</td>
+						<td>${pedido.horario.toMinutes()}</td>
 				<%--		<td>${filme.preco}</td>			--%>			
 						<td>
-							<a onclick="excluir(${filme.id})" class="btn btn-danger">Excluir</a>
+							<a onclick="excluir(${pedido.id})" class="btn btn-danger">Excluir</a>
 						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 		<div class="col-md-6 col-md-offset-3">
-			<a href="/admin/filme" class="btn btn-block btn-info">Novo</a>
+			<a href="/admin/pedido" class="btn btn-block btn-info">Novo</a>
 		</div>
 		</div>
 		<script>
 			function excluir(id) {
 				var url = window.location.href;
 				$.ajax({
-					url:"/admin/filme/" + id,
+					url:"/admin/pedido/" + id,
 					type: 'DELETE',
 					success: function (result) {
 						console.log(result);

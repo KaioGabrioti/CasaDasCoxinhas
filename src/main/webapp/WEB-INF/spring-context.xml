@@ -15,9 +15,9 @@
 	   					http://www.springframework.org/schema/data/jpa
 						http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-	<jpa:repositories base-package="br.com.caelum.ingresso" />
+	<jpa:repositories base-package="br.com.casadascoxinhas.coxinhas" />
 
-	<context:component-scan base-package="br.com.caelum.ingresso" />
+	<context:component-scan base-package="br.com.casadascoxinhas.coxinhas" />
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler/>
 
@@ -27,9 +27,9 @@
 	</bean>
 
 	<bean id="mysqlDS" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="username" value="root"/>
-		<property name="password" value="caelum"/>
-		<property name="url" value="jdbc:mysql://localhost/ingresso?createDatabaseIfNotExist=true"/>
+		<property name="username" value="casadascoxinhas"/>
+		<property name="password" value="coxinhas"/>
+		<property name="url" value="jdbc:mysql://localhost/casadascoxinhas?createDatabaseIfNotExist=true"/>
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 	</bean>
 	
@@ -51,8 +51,8 @@
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
-		<property name="username" value="cursofj22@gmail.com" />
-		<property name="password" value="Caelum123" />
+		<property name="username" value="kgabrioti@gmail.com" />
+		<property name="password" value="coxinha" />
 
 		<property name="javaMailProperties">
 			<props>
